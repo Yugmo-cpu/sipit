@@ -1,63 +1,33 @@
-let musicPlaying = false
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yay! 🎉</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div class="hearts-bg"></div>
 
-window.addEventListener('load', () => {
-    launchConfetti()
+    <div class="container yes-container">
+        <h1 class="yes-title">Knew you would say yes! 🎉</h1>
 
-    // Autoplay music (works since user clicked Yes to get here)
-    const music = document.getElementById('bg-music')
-    music.volume = 0.3
-    music.play().catch(() => {})
-    musicPlaying = true
-    document.getElementById('music-toggle').textContent = '🔊'
-})
+        <div class="gif-container">
+            <img id="cat-gif" src="https://media.tenor.com/kueOd43ZAlAAAAAi/anuragita-anuragita-couple.gif" alt="celebrating">
+        </div>
 
-function launchConfetti() {
-    const colors = ['#ff69b4', '#ff1493', '#ff85a2', '#ffb3c1', '#ff0000', '#ff6347', '#fff', '#ffdf00']
-    const duration = 6000
-    const end = Date.now() + duration
+        <p class="yes-message">You make me so happy! 🤗</p>
+    </div>
 
-    // Initial big burst
-    confetti({
-        particleCount: 150,
-        spread: 100,
-        origin: { x: 0.5, y: 0.3 },
-        colors
-    })
+    <audio id="bg-music" loop>
+        <source src="music/Quiet Place.mp3" type="audio/mpeg">
+    </audio>
 
-    // Continuous side cannons
-    const interval = setInterval(() => {
-        if (Date.now() > end) {
-            clearInterval(interval)
-            return
-        }
+    <button id="music-toggle" onclick="toggleMusic()" title="Toggle music">🔊</button>
 
-        confetti({
-            particleCount: 40,
-            angle: 60,
-            spread: 55,
-            origin: { x: 0, y: 0.6 },
-            colors
-        })
-
-        confetti({
-            particleCount: 40,
-            angle: 120,
-            spread: 55,
-            origin: { x: 1, y: 0.6 },
-            colors
-        })
-    }, 300)
-}
-
-function toggleMusic() {
-    const music = document.getElementById('bg-music')
-    if (musicPlaying) {
-        music.pause()
-        musicPlaying = false
-        document.getElementById('music-toggle').textContent = '🔇'
-    } else {
-        music.play()
-        musicPlaying = true
-        document.getElementById('music-toggle').textContent = '🔊'
-    }
-}
+    <script src="yes-script.js"></script>
+</body>
+</html>
