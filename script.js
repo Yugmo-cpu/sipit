@@ -1,12 +1,12 @@
 const gifStages = [
-    "https://media.tenor.com/Ow1niQvUaIwAAAAj/cosytales-couple.gif",    // 0 normal
-    "https://media.tenor.com/wEPlUzgCpF8AAAAj/cosytales-art.gif",  // 1 confused
-    "https://media.tenor.com/znnIKJ4tjuwAAAAj/cosytales-cute.gif",             // 2 pleading
-    "https://media.tenor.com/tXPlULUWRbYAAAAj/cosytales-couple.gif",             // 3 sad
-    "https://media.tenor.com/vXnRHfwE-DgAAAAj/cosytales-cute.gif",       // 4 sadder
-    "https://media.tenor.com/4y_gjk4gIxQAAAAj/cosytales-couple.gif",             // 5 devastated
-    "https://media.tenor.com/FenOd0lESmcAAAAj/cosytales-chibi.gif",               // 6 very devastated
-    "https://media.tenor.com/qhzwJcJpp_4AAAAj/cosytales-cute.gif"  // 7 crying runaway
+    "https://media.tenor.com/gw1XjvvoZIAAAAAj/anuragita-anuragita-boy.gif",    // 0 normal
+    "https://media.tenor.com/zg5C49h6QGwAAAAj/anuragita-anuragita-boy.gif",  // 1 confused
+    "https://media.tenor.com/_6sADGAk28oAAAAj/anuragita-anuragita-boy.gif",             // 2 pleading
+    "https://media.tenor.com/zKmPaF4n404AAAAj/anuragita-anuragita-boy.gif",             // 3 sad
+    "https://media.tenor.com/EHnQZScdaLMAAAAj/anuragita-anuragita-boy.gif",       // 4 sadder
+    "https://media.tenor.com/DR0Us4RmNqYAAAAj/anuragita-anuragita-boy.gif",             // 5 devastated
+    "https://media.tenor.com/yFmf-BfckfYAAAAj/anuragita-anuragita-boy.gif",               // 6 very devastated
+    "https://media.tenor.com/XrfWz4ISCakAAAAj/anuragita-anuragita-boy.gif"  // 7 crying runaway
 ]
 
 const noMessages = [
