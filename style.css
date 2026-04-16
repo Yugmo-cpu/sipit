@@ -2,8 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* Suggestion: Removes the default blue highlight when tapping buttons on mobile */
-    -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -14,9 +12,6 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    /* Suggestion: Prevents the "bounce" or "pull-to-refresh" effect on mobile browsers */
-    position: fixed;
-    width: 100%;
     background-image:
         radial-gradient(circle at 15% 85%, #ffb3c1 0%, transparent 40%),
         radial-gradient(circle at 85% 15%, #ff8fa3 0%, transparent 40%),
@@ -60,12 +55,10 @@ body {
     z-index: 1;
     text-align: center;
     padding: 40px 20px;
-    width: 100%;
 }
 
 h1 {
-    /* Suggestion: Fluid font size that looks good on both small and large screens */
-    font-size: clamp(1.8rem, 8vw, 2.4rem);
+    font-size: 2.4rem;
     color: #d63384;
     font-weight: 900;
     margin-bottom: 20px;
@@ -114,9 +107,6 @@ h1 {
     transition: transform 0.15s, box-shadow 0.15s;
     box-shadow: 0 6px 20px rgba(76, 175, 80, 0.45);
     letter-spacing: 1px;
-    /* Suggestion: Ensures the button doesn't grow larger than the screen width */
-    max-width: 90vw;
-    word-wrap: break-word;
 }
 
 #yes-btn:hover {
@@ -140,8 +130,6 @@ h1 {
     cursor: pointer;
     transition: background 0.2s, left 0.25s ease, top 0.25s ease;
     box-shadow: 0 4px 14px rgba(231, 76, 60, 0.4);
-    /* Suggestion: Stops standard touch behaviors (scrolling) from interfering with clicks */
-    touch-action: none; 
 }
 
 #no-btn:hover {

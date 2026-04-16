@@ -3,18 +3,12 @@ let musicPlaying = false
 window.addEventListener('load', () => {
     launchConfetti()
 
+    // Autoplay music (works since user clicked Yes to get here)
     const music = document.getElementById('bg-music')
     music.volume = 0.3
-    
-    // Suggestion: A slight delay helps iOS resume music that started on the previous page
-    setTimeout(() => {
-        music.play().then(() => {
-            musicPlaying = true
-            document.getElementById('music-toggle').textContent = '🔊'
-        }).catch(() => {
-            console.log("Audio waiting for user tap")
-        })
-    }, 500);
+    music.play().catch(() => {})
+    musicPlaying = true
+    document.getElementById('music-toggle').textContent = '🔊'
 })
 
 function launchConfetti() {
@@ -22,6 +16,7 @@ function launchConfetti() {
     const duration = 6000
     const end = Date.now() + duration
 
+    // Initial big burst
     confetti({
         particleCount: 150,
         spread: 100,
@@ -29,6 +24,7 @@ function launchConfetti() {
         colors
     })
 
+    // Continuous side cannons
     const interval = setInterval(() => {
         if (Date.now() > end) {
             clearInterval(interval)
